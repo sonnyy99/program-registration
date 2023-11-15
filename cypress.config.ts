@@ -5,5 +5,6 @@ export default defineConfig({
     setupNodeEvents() {
       // implement node event listeners here
     },
+    baseUrl: "https://regportal.cnh.bc.ca",
   },
 });
