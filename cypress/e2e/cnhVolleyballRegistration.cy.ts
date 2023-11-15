@@ -1,7 +1,6 @@
-describe('Program Registration', () => {
-  specify('Sign in and register', () => {
-    cy.visit(Cypress.env("registrationUrl"));
+describe("Program Registration", () => {
+  specify("Sign in and register", () => {
     cy.cnhLogin(Cypress.env("username"), Cypress.env("password"));
-    // TODO: Register
-  })
-})
+    cy.cnhProgramRegister(Cypress.env("registrationUrl"));
+  });
+});

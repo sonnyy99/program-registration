@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */
+  },
+  "include": ["**/*.ts"]
+}
