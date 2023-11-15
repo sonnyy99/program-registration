@@ -1,0 +1,30 @@
+{
+  "name": "program-registration",
+  "version": "1.0.0",
+  "description": "Code to register for programs online",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonnyy99/program-registration.git"
+  },
+  "author": "Sonny Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonnyy99/program-registration/issues"
+  },
+  "homepage": "https://github.com/sonnyy99/program-registration#readme",
+  "dependencies": {
+    "cypress": "^13.5.1",
+    "eslint-plugin-cypress": "^2.15.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0"
+  }
+}
