@@ -4,7 +4,7 @@ This project is intended to help register for Volleyball programs at Collingwood
 
 The project currently registers for the Wednesday 8:30PM timeslot automatically through a GitHub Actions workflow triggered on a cron schedule. See the `Copying this project` section below if you want to set this up for yourself.
 
-The registration script can also be run locally to register, provided you start the script a few minutes before registration opens. See the `Steps to run` section below for how to do this.
+The registration script can also be run locally to register, provided you start the script at most 24 hours before registration opens. See the `Steps to run` section below for how to do this.
 
 # Requirements
 
@@ -17,8 +17,9 @@ The registration script can also be run locally to register, provided you start 
 2. Create and fill in `cypress.env.json`.
    - Required parameters are in `example.env.json`
    - Note that `registrationUrl` should include everything after `https://regportal.cnh.bc.ca`. For example, `/program/getprogramdetails?courseid=297fcb87-356b-47fd-9c82-1e8d31f5d12a&semesterid=f865a4c0-cead-4947-9cfb-113cb32e5726`
-3. Run `npm run cypress:run`, ideally a few minutes before registration starts (but can be up to 24 hours in advance)
-   - WARNING: To ensure a quick registration, the script logs in right away, then waits until the registration time before registering. However, if your login session expires during this waiting period, the script will need to login again at registration time. This extra few seconds may result in you being unable to secure a registration spot.
+3. Run `npm run cypress:run`
+   - This can be run up to 24 hours in advance of the registration time.
+   - WARNING: If your computer goes to sleep or shuts off before the registration time the script will stop running and you will be unable to register
 4. Wait for the script to finish
 
 # Copying this project
