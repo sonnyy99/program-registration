@@ -7,13 +7,24 @@ import "cypress-wait-until";
 // ***********************************************
 
 Cypress.Commands.add("cnhLogin", (username: string, password: string) => {
-  cy.visit("/");
-  cy.contains("Sign In").click();
-  signInForm.usernameInput().type(username);
-  signInForm.nextButton().click();
-  signInForm.passwordInput().type(password);
-  signInForm.signInButton().click();
-  cy.get("div[class='userActionsDropdown").contains(username);
+  cy.session(
+    username,
+    () => {
+      cy.visit("/");
+      cy.contains("Sign In").click();
+      signInForm.usernameInput().type(username);
+      signInForm.nextButton().click();
+      signInForm.passwordInput().type(password);
+      signInForm.signInButton().click();
+      cy.get("div[class='userActionsDropdown']").contains(username);
+    },
+    {
+      validate() {
+        cy.visit("/");
+        cy.get("div[class='userActionsDropdown']").contains(username);
+      },
+    }
+  );
 });
 
 Cypress.Commands.add("cnhProgramRegister", (registrationUrl: string) => {
