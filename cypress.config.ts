@@ -4,9 +4,9 @@ export default defineConfig({
   e2e: {
     setupNodeEvents(on) {
       on("task", {
-        getCurrentMinute() {
+        getCurrentTime() {
           const date = new Date();
-          return date.getUTCMinutes();
+          return { hour: date.getUTCHours(), minute: date.getUTCMinutes() };
         },
       });
     },
