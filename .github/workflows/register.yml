@@ -1,6 +1,11 @@
 name: Program Registration
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "28 4 * * WED"
+    # Tuesday 8:30PM PST Registration Time (we are 8 hours behind UTC)
+    # Run workflow a few minutes earlier to ensure we can register right on time
+    # May need to adjust for Daylight Savings later
 jobs:
   Register:
     runs-on: ubuntu-latest
