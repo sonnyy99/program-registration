@@ -7,7 +7,9 @@ on:
     # Run workflow a few minutes earlier to ensure we can register right on time
     # May need to adjust for Daylight Savings later
 jobs:
-  Register:
+  register:
+    name: Register
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
