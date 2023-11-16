@@ -2,6 +2,7 @@
 
 import { registrationForm } from "../lib/registrationForm";
 import { signInForm } from "../lib/signInForm";
+import "cypress-wait-until";
 
 // ***********************************************
 
