@@ -1,5 +1,6 @@
 describe("Program Registration", () => {
   const registrationMinute = 30;
+  const oneDayInMs = 86400000;
   specify("Sign in and register", () => {
     cy.cnhLogin(Cypress.env("username"), Cypress.env("password"));
     cy.waitUntil(
@@ -7,8 +8,9 @@ describe("Program Registration", () => {
         cy
           .task("getCurrentMinute")
           .then((minute) => minute === registrationMinute),
-      { timeout: 180000, interval: 1000 } // 3 minute timeout, check again every second
+      { timeout: oneDayInMs, interval: 1000 } // 1 day timeout, check again every second
     ).then(() => {
+      cy.cnhLogin(Cypress.env("username"), Cypress.env("password")); // Will be skipped if the previous login session has not expired
       cy.cnhProgramRegister(Cypress.env("registrationUrl"));
     });
   });
