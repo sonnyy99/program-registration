@@ -30,5 +30,6 @@ The registration script can also be used locally to register, provided you start
    - Click on `New repository secret`
    - Name the secret `CYPRESS_ENV`
    - Put the completed contents (JSON format) of `example.env.json` as the Secret
+     ![Alt text](/addSecretExample.png?raw=true)
    - Click `Add secret`
 3. You should now be set up to register automatically for Volleyball!
