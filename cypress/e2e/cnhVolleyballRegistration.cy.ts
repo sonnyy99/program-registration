@@ -1,6 +1,6 @@
 describe("Program Registration", () => {
-  const registrationMinute = 30;
-  const registrationHour = 4; // 8PM PST is 4AM in UTC
+  const registrationMinute = 59;
+  const registrationHour = 20; // 8PM PST is 4AM in UTC
   const oneDayInMs = 86400000;
 
   specify("Sign in and register", () => {
