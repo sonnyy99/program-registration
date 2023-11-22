@@ -10,6 +10,5 @@ export default defineConfig({
         },
       });
     },
-    baseUrl: "https://regportal.cnh.bc.ca",
   },
 });
