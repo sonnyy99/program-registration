@@ -2,7 +2,7 @@
 
 This project is intended to help register for Volleyball programs at Collingwood Neighbourhood House.
 
-The project currently registers for the Wednesday 8:30PM timeslot automatically through a GitHub Actions workflow triggered on a cron schedule. See the `Copying this project` section below if you want to set this up for yourself.
+The project currently registers for the Monday/Wednesday 8:30PM timeslot automatically through a GitHub Actions workflow triggered on a cron schedule. See the `Copying this project` section below if you want to set this up for yourself.
 
 The registration script can also be run locally to register, provided you start the script at most 24 hours before registration opens. See the `Steps to run` section below for how to do this.
 
