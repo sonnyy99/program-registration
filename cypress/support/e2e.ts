@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-namespace */
-export {};
+import "cypress-failed-log";
+
 declare global {
   namespace Cypress {
     interface Chainable {
