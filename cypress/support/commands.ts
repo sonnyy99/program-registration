@@ -10,7 +10,7 @@ Cypress.Commands.add("cnhLogin", (username: string, password: string) => {
   cy.session(
     username,
     () => {
-      cy.visit("/");
+      cy.visit("https://regportal.cnh.bc.ca");
       cy.contains("Sign In").click();
       signInForm.usernameInput().type(username);
       signInForm.nextButton().click();
@@ -20,7 +20,7 @@ Cypress.Commands.add("cnhLogin", (username: string, password: string) => {
     },
     {
       validate() {
-        cy.visit("/");
+        cy.visit("https://regportal.cnh.bc.ca");
         cy.get("div[class='userActionsDropdown']").contains(username);
       },
     }

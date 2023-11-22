@@ -16,7 +16,6 @@ The registration script can also be run locally to register, provided you start 
 1. Run `npm install`
 2. Create and fill in `cypress.env.json`.
    - Required parameters are in `example.env.json`
-   - Note that `registrationUrl` should include everything after `https://regportal.cnh.bc.ca`. For example, `/program/getprogramdetails?courseid=297fcb87-356b-47fd-9c82-1e8d31f5d12a&semesterid=f865a4c0-cead-4947-9cfb-113cb32e5726`
 3. Run `npm run cypress:run`
    - This can be run up to 24 hours in advance of the registration time.
    - WARNING: If your computer goes to sleep or shuts off before the registration time the script will stop running and you will be unable to register
