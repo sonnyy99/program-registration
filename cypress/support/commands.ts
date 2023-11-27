@@ -14,7 +14,7 @@ Cypress.Commands.add("cnhLogin", (username: string, password: string) => {
       cy.contains("Sign In").click();
       signInForm.usernameInput().type(username);
       signInForm.nextButton().click();
-      signInForm.passwordInput().type(password);
+      signInForm.passwordInput().type(password, { log: false });
       signInForm.signInButton().click();
       cy.get("div[class='userActionsDropdown']").contains(username);
     },
