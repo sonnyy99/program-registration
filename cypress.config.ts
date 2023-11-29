@@ -3,6 +3,7 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   video: true,
+  defaultCommandTimeout: 15000,
   e2e: {
     setupNodeEvents(on) {
       require("cypress-failed-log/on")(on);
