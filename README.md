@@ -11,16 +11,6 @@ The registration script can also be run locally to register, provided you start 
 - npm
 - NodeJS: v18.18.2
 
-# Steps to run
-
-1. Run `npm install`
-2. Create and fill in `cypress.env.json`.
-   - Required parameters are in `example.env.json`
-3. Run `npm run cypress:run`
-   - This can be run up to 12 hours in advance of the registration time.
-   - WARNING: If your computer goes to sleep or shuts off before the registration time the script will stop running and you will be unable to register
-4. Wait for the script to finish
-
 # Copying this project
 
 1. Follow the instructions here: https://stackoverflow.com/questions/18200248/cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github
@@ -33,5 +23,23 @@ The registration script can also be run locally to register, provided you start 
    - Name the secret `CYPRESS_ENV`
    - Put the completed contents (JSON format) of `example.env.json` as the Secret
      ![Alt text](/addSecretExample.png?raw=true)
+     example.env.json
+     ```json
+     {
+       "username": "TBD",
+       "password": "TBD",
+       "registrationUrl": "TBD"
+     }
+     ```
    - Click `Add secret`
 3. You should now be set up to register automatically for Volleyball!
+
+# Steps to run
+
+1. Run `npm install`
+2. Create and fill in `cypress.env.json`.
+   - Required parameters are in `example.env.json`
+3. Run `npm run cypress:run`
+   - This can be run up to 12 hours in advance of the registration time.
+   - WARNING: If your computer goes to sleep or shuts off before the registration time the script will stop running and you will be unable to register
+4. Wait for the script to finish
