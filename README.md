@@ -32,7 +32,8 @@ The registration script can also be run locally to register, provided you start 
      }
      ```
    - Click `Add secret`
-3. You should now be set up to register automatically for Volleyball!
+3. You should now be set up to register automatically for Volleyball on Mondays and Wednesdays.
+   - You may optionally disable the automatic registration workflow for either or both of the days by following the steps here: https://docs.github.com/en/actions/using-workflows/disabling-and-enabling-a-workflow
 
 # Steps to run
 
