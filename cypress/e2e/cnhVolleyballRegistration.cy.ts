@@ -14,7 +14,7 @@ describe("Program Registration", () => {
               currentTime["minute"] === registrationMinute - 1 &&
               currentTime["hour"] === registrationHour
           ),
-      { timeout: oneDayInMs / 2, interval: 30000 } // 12 hour timeout, check again every 30 seconds
+      { timeout: oneDayInMs / 2, interval: 60000 } // 12 hour timeout, check again every minute
     ).then(() => {
       cy.cnhLogin(Cypress.env("username"), Cypress.env("password"));
     });
