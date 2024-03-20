@@ -38,7 +38,7 @@ The registration script can also be run locally to register, provided you start 
 # Steps to run
 
 1. Run `npm install`
-2. Create and fill in `cypress.env.json`.
+2. Create and fill in `cypress.env.json`
    - Required parameters are in `example.env.json`
 3. Run `npm run cypress:run`
    - This can be run up to 12 hours in advance of the registration time.
